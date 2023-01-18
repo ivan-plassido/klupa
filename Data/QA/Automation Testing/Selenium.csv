@@ -1,0 +1,153 @@
+What are the Selenium suite components?,"Selenium IDE
+It is a Firefox/Chrome plug-in that was developed to speed up the creation of automation scripts. It records the user actions on the web browser and exports them as a reusable script.
+
+Selenium Remote Control (RC)
+RC is a server that allows users to write application tests in various programming languages. The commands from the test script are accepted by this server and are sent to the browser as Selenium core JavaScript commands. The browser then behaves accordingly.
+
+Selenium WebDriver
+WebDriver is a programming interface that helps create and run test cases. It makes provision to act on web elements. Unlike RC, WebDriver does not require an additional server and interacts natively with the browser applications.
+
+Selenium Grid
+The grid was designed to distribute commands to different machines simultaneously. It allows the parallel execution of tests on different browsers and different operating systems. It is exceptionally flexible and is integrated with other suite components for simultaneous execution."
+What are the limitations of Selenium testing?,"1. Unavailability of reliable tech support: Since Selenium is an open-source tool, it does not have dedicated tech support to resolve the user queries. 
+2. Tests web applications only: Selenium needs to be integrated with third-party tools like Appium and TestNG to test desktop and mobile applications.
+3. Limited support for image testing.
+4. No built-in reporting and test management facility: Selenium has to be integrated with tools like TestNG, or JUnit among others to facilitate test reporting and management.
+5. May require the knowledge of programming languages: Selenium WebDriver expects the user to have some basic knowledge about programming. "
+What are the testing types supported by Selenium? ,"Selenium supports Regression testing and Functional testing. 
+
+Regression testing - It is a full or partial selection of already executed test cases that are re-executed to ensure existing functionalities work fine.
+Functional testing - Functional Testing involves the verification of every function of the application with the required specification. "
+Mention the types of Web locators.,"Locator is a command that tells Selenium IDE which GUI elements ( say Text Box, Buttons, Check Boxes, etc) it needs to operate on. Locators specify the area of action.
+
+Locator by ID: It takes a string parameter which is a value of the ID attribute which returns the object to findElement() method.
+  driver.findElement(By.id(“user”));
+
+Locator by the link: If your targeted element is a link text then you can use the by.linkText locator to locate that element.
+  driver.findElement(By.linkText(“Today’s deals”)).click();
+
+Locator by Partial link: The target link can be located using a portion of text in a link text element.
+  driver.findElement(By.linkText(“Service”)).click();
+
+Locator by Name: The first element with the name attribute value matching the location will be returned.
+  driver.findElement(By.name(“books”).click());
+
+Locator by TagName: Locates all the elements with the matching tag name
+  driver.findElement(By.tagName(“button”).click());
+
+Locator by classname: This finds elements based on the value of the CLASS attribute. If an element has many classes then this will match against each of them. 
+  driver.findElement(By.className(“inputtext”));
+
+Locator by XPath: It takes a parameter of String which is a XPATHEXPRESSION and it returns an object to findElement() method.
+  driver.findElement(By.xpath(“//span[contains(text(),’an account’)]”)).getText();
+
+Locator by CSS Selector: Locates elements based on the driver’s underlying CSS selector engine.
+  driver.findElement(By.cssSelector(“input#email”)).sendKeys(“myemail@email.com”);"
+What are the types of waits supported by WebDriver?,"Implicit wait - Implicit wait commands Selenium to wait for a certain amount of time before throwing a “No such element” exception.
+driver.manage().timeouts().implicitlyWait(TimeOut, TimeUnit.SECONDS);
+
+Explicit wait - Explicit wait is used to tell the Web Driver to wait for certain conditions before throwing an ""ElementNotVisibleException"" exception.
+WebDriverWait wait = new WebDriverWait(WebDriver Reference, TimeOut);
+
+Fluent wait - It is used to tell the web driver to wait for a condition, as well as the frequency with which we want to check the condition before throwing an ""ElementNotVisibleException"" exception.
+Wait wait = new FluentWait(WebDriver reference).withTimeout(timeout, SECONDS).pollingEvery(timeout, SECONDS).ignoring(Exception.class);"
+Mention the types of navigation commands,"driver.navigate().to(""https://www.ebay.in/""); - Navigates to the provided URL
+driver.navigate().refresh(); - This method refreshes the current page
+driver.navigate().forward(); - This method does the same operation as clicking on the Forward Button of any browser. It neither accepts nor returns anything.
+driver.navigate().back(); - This method does the same operation as clicking on the Back Button of any browser. It neither accepts nor returns anything."
+What is the major difference between driver.close() and driver.quit()?,"driver.close()
+This command closes the browser’s current window. If multiple windows are open, the current window of focus will be closed.
+
+driver.quit()
+ When quit() is called on the driver instance and there are one or more browser windows open, it closes all the open browser windows."
+How to type text in an input box using Selenium?,"sendKeys() is the method used to type text in input boxes 
+
+Consider the following example - 
+
+  WebElement email = driver.findElement(By.id(“email”)); - Finds the “email” text using the ID locator
+
+  email.sendKeys(“abcd.efgh@gmail.com”);  - Enters text into the URL field
+
+  WebElement password = driver.findElement(By.id(“Password”)); - Finds the “password” text using the ID locator
+
+  password.sendKeys(“abcdefgh123”); - Enters text into the password field"
+How to click on a hyperlink in Selenium?,"driver.findElement(By.linkText(“Today’s deals”)).click();
+The command finds the element using link text and then clicks on that element, where after the user would be redirected to the corresponding page.
+
+driver.findElement(By.partialLinkText(“Service”)).click();
+The above command finds the element based on the substring of the link provided in the parenthesis and thus partialLinkText() finds the web element. "
+How to assert the title of a webpage? ,"Get the title of the webpage and store in a variable
+    String actualTitle = driver.getTitle();
+
+Type in the expected title
+   String expectedTitle = “abcdefgh"";
+
+Verify if both of them are equal
+   if(actualTitle.equalsIgnoreCase(expectedTitle))
+   System.out.println(""Title Matched"");
+  else
+  System.out.println(""Title didn't match"");
+
+Alternatively,
+   Assert.assertEquals(actualTitle, expectedTitle);"
+How to retrieve CSS properties of an element?,"getCssValue() method is used to retrieve CSS properties of any web element
+
+General Syntax:
+  driver.findElement(By.id(“id“)).getCssValue(“name of css attribute”);
+
+Example:
+   driver.findElement(By.id(“email“)).getCssValue(“font-size”);"
+What is POM (Page Object Model)?,Every webpage of the application has a corresponding page class that is responsible for locating the web elements and performing actions on them. Page Object Model is a design pattern that helps create object repositories for the web elements. POM improves code reusability and readability. Multiple test cases can be run on the object repository.
+Can Captcha be automated?,"No, Selenium cannot automate Captcha. "
+How does Selenium handle Windows-based pop-ups?,"Selenium was designed to handle web applications. Windows-based features are not natively supported by Selenium. However, third-party tools like AutoIT, Robot, etc can be integrated with Selenium to handle pop-ups and other Windows-based features. "
+Is there a way to type in a textbox without using sendKeys()?,"Yes! Text can be entered into a textbox using JavaScriptExecutor
+JavascriptExecutor jse = (JavascriptExecutor) driver;
+jse.executeScript(""document.getElementById(‘email').value=“abc.efg@xyz.com”);"
+What does the switchTo() command do? ,"switchTo() command is used to switch between windows, frames or pop-ups within the application. Every window instantiated by the WebDriver is given a unique alphanumeric value called “Window Handle”.
+Get the window handle of the window you wish to switch to
+   String  handle= driver.getWindowHandle();
+
+Switch to the desired window
+   driver.switchTo().window(handle);
+
+Alternatively
+  for(String handle= driver.getWindowHandles())
+   { driver.switchTo().window(handle); }"
+How to upload a file in Selenium WebDriver? ,You can achieve this by using sendkeys() or Robot class method. Locate the text box and set the file path using sendkeys() and click on submit button.
+How to set browser window size in Selenium?,"The window size can be maximized, set or resized 
+
+To maximize the window
+   driver.manage().window().maximize();
+
+To set the window size
+  Dimension d = new Dimension(400,600);
+  driver.manage().window().setSize(d);"
+When do we use findElement() and findElements()?,"findElement() is used to access any single element on the web page. It returns the object of the first matching element of the specified locator.
+
+General syntax:
+   WebElement element = driver.findElement(By.id(example));
+findElements() is used to find all the elements in the current web page matching the specified locator value. All the matching elements would be fetched and stored in the list of Web elements."
+What is test automation or automation testing?,"Test automation or automation testing is the process of using specialized software to control the execution of tests and compare the results with expected outcomes. Automation testing can help reduce the time, cost, and effort required to test software applications by automating repetitive tasks and allowing testers to focus on more critical test cases. "
+What are the advantages of automation testing?,"There are many advantages of automation testing. Perhaps the most obvious is that it can save you a lot of time and effort. Automation testing can help to speed up the process of testing by automating repetitive tasks, such as running the same test cases multiple times or across different browsers.
+
+Another big advantage is that automation testing can improve the accuracy of your tests. By automating the process, you can eliminate human error and ensure that your tests are always carried out the same way. This can be particularly important when testing complex applications where there is a greater risk of errors.
+
+Finally, automation testing can also help to improve the coverage of your tests. By automating more of the testing process, you can increase the number of test cases that are run and cover a larger range of functionality. This can help to ensure that your software is thoroughly tested and free of bugs."
+What do you mean by the assertion in Selenium?,"An assertion is a method of testing whether a particular condition is true or false. In Selenium, assertions are used to verify the state of elements on a page or the results of an action. Assertions can be used to check for the presence or absence of an element, the value of an element, or the text of an element. Assertions can also be used to check that an element is visible or hidden.
+
+Assertions are an important part of testing with Selenium, as they enable you to verify that the state of your application meets your expectations. Without assertions, it would be difficult to know whether or not your tests are actually passing or failing."
+Explain the difference between assert and verify commands.,"The assert command is used to check if the given condition is true or not. If the condition is true, then the execution of the program will continue. If the condition is false, then the execution of the program will stop.
+
+The verify command is used to check if the given condition is true or not. If the condition is true, then the execution of the program will continue. If the condition is false, then the execution of the program will not stop, but an error message will be displayed."
+What do you mean by Xpath?,XPath is a language for addressing parts of an XML document. XSLT and other XML-related technologies use it to access data within XML documents. XPath can be used to navigate through elements and attributes in an XML document. XPath is a major element in the XSLT standard and is crucial for processing XML documents.
+Explain XPath Absolute and XPath attributes.,"XPath has two main types of expressions: absolute and relative. Absolute expressions always start with a forward slash (/), which indicates the root element of the document. Relative expressions do not start with a forward slash, and are relative to the current context.
+
+Attributes are another important part of XPath. Attributes are added to elements and can contain valuable information about that element. In order to access an attribute, you must use the at sign (@) followed by the attribute name."
+What are the different types of annotations which are used in Selenium?,"Different types of annotations that are used in Selenium include:
+
+@Test - This annotation is used to mark a method as a test method
+@BeforeMethod - This annotation is used to execute a method before each test method
+@AfterMethod - This annotation is used to execute a method after each test method
+@BeforeClass - This annotation is used to execute a method before the first test method"
+What is the main disadvantage of implicit wait?,"The main disadvantage of implicit wait is that it can slow down your tests. This is because, by default, the implicit wait time is set to zero. As such, if an element is not found immediately, your test will keep trying to find it for the duration of the implicit wait time. This can add a significant amount of time to your test suite. Another disadvantage of implicit wait is that it can cause your tests to fail if the element you are waiting for takes longer to appear than the implicit wait time. Finally, implicit wait can make your tests less reliable because they can introduce flakiness."
+How can we launch different browsers in Selenium WebDriver?,"We can launch different browsers in Selenium WebDriver using several methods. For example, we can use the setWebDriver() method to specify the path to the browser's executable file. Alternatively, we can use the addCustomProfilePreference() method to add a custom profile preference for the browser. Finally, we can use the launchBrowser() method to launch the browser."

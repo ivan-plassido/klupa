@@ -1,0 +1,99 @@
+What is Automation?,Automation is any action that can reduce human efforts.
+What is Automation testing?,"The process of using special software tools or scripts to perform testing tasks such as entering data, executing the test steps and comparing the results, etc. is known as Automation testing."
+What all things can you automate?,"Regression test suite
+Smoke / Sanity test suite
+Build deployment
+Test data creation
+Automating behind the GUI like testing of APIs and methods."
+When is Automation testing useful?,"Automation testing is useful in the following scenarios:
+
+a) Regression testing: In case of a bug fix or new module implementation, we have to make sure that the already implemented or unchanged functionality is not affected. In this case, we end up running the regression test case multiple times.
+For Example: After each change request or bug fix, after each iteration in case of incremental development approach, etc.
+
+b) Non-functional Testing: Testing the non-functional aspects of an application.
+For Example, Load testing or performance testing, etc are very difficult for humans to track and analyze.
+
+c) Complex calculation checks or test scenarios that are prone to human errors.
+
+d) Repeated execution of the same tests: Sometimes, we have to run the same set of test case for a different set of data or after each build release or on multiple hardware, software or combination of both.
+Automating the test cases in the above scenarios helps in achieving the speed of testing and minimizing human errors."
+How do you identify the test cases which are suitable for automation?,Identifying the appropriate test cases for automation is the most important step towards automation.
+Can you achieve 100% automation?,100% automation would be difficult to achieve because there would be many edge test cases and some cases that are executed seldom. Automating these cases which are not executed that often will not add value to the automated suite.
+How to decide the tool that one should use for Automation testing in their projects?,"In order to identify the tool for Automation testing in your project:
+
+a) Understand your project requirements thoroughly and identify the testing scenarios that you want to automate.
+
+b) Search for the list of tools that support your project’s requirements.
+
+c) Identify your budget for the automation tool. Select the tools within your budget.
+
+d) Identify if you already have skilled resources for the tools. If you don’t have the necessary skilled resources then identify the cost for training the existing resources or hiring new resources."
+"Currently I do not have any automation in place in my project, but now I want to implement automation, what would be my steps?","First, identify which type of testing/test cases you want to automate.
+Identify the tool
+Design the framework
+Create utility files and environment files.
+Start scripting
+Identify and work on reporting.
+Allocating time for enhancing and maintaining the scripts."
+How do you decide which tool you have to use?,Concluding which tool is best suitable for the project requires a lot of brainstorming and discussions.
+Once you identify the tool what would be your next steps?,"Once we finalize the tool, our next step would be to design the framework."
+What is a framework?,"A framework is a set of the structure of the entire automation suite. It is also a guideline, which if followed can result in a structure that is easy to maintain and enhance."
+What are the attributes of a good framework?,"The characteristics include:
+
+Modular: The framework should be adaptable to change. Testers should be able to modify the scripts as per the environment or login information change.
+Reusable: The commonly used methods or utilities should be written in a common file that is accessible to all the scripts.
+Consistent: The suite should be written in a consistent format by following all the accepted coding practices.
+Independent: The scripts should be written in such a way that they are independent of each other. In case one test fails, it should not hold back the remaining test cases (unless it is a login page)
+Logger: It is good to have implemented the logging feature in the framework. This would help in case our scripts run for longer hours (say nightly mode), if the script fails at any point of time, having the log file will help us to detect the location along with the type of the error.
+Reporting: It is good to have the reporting feature automatically embedded into the framework. Once the scripting is done, we can have the results and reports sent via email.
+Integration: Automation Framework should be such that it is easy to integrate with other applications like continuous integration or triggering the automated script as soon as the build is deployed."
+Can you do without a framework?,"Frameworks are guidelines and not mandatory rules, so we can do without a framework, but if we create it and follow it, enhancing and maintaining would be easy to implement."
+What are the different types of the Automation tool that you are aware of?,"Open source tool like Selenium, JMeter, etc.
+
+Paid tools like QTP, Load Runner, Ranorex, RFT, and Rational Robot."
+What generally is the structure of a framework?,"Normally the structure should have – (It would differ from project to project)
+
+A “src” (source) folder having the actual test scripts.
+A”lib” (library) folder having all the libraries and common methods.
+A “class” folder having all the class file (in-case using java).
+A “log” folder having the log file(s).
+A file/folder having all the web element Ids.
+A file containing the URL, environment and login information."
+"Where will you maintain information like URL, login, password?",This information should always be maintained in a separate file.
+What are the different types of frameworks?,"Different types of frameworks includes:
+
+Keyword-driven framework
+Data-Driven framework
+Hybrid Framework
+Linear Scripting"
+Can you tell some good coding practices while automation?,"Some of the good coding practices include:
+
+Add appropriate comments.
+Identify the reusable methods and write it in a separate file.
+Follow the language-specific coding conventions.
+Maintain the test data in a separate file.
+Run your scripts regularly."
+Which test cases can be automated?,"Types of test cases which can be automated are:
+
+(i) Smoke test cases: Smoke testing is also known as build verification testing. Smoke test cases are run every time when a new build is released to check the health of the build for acceptance to perform testing.
+
+(ii) Regression Test Cases: Regression testing is the testing to ensure that previously developed modules are functioning as expected after a new module is added or a bug is fixed.
+
+Regression test cases are very crucial in incremental software approach where a new functionality is added at each increment phase. In this case, regression testing is performed at each incremental phase.
+
+(iii) Complex Calculation test cases: Test cases which involve some complex calculations to verify a field for an application fall into this category. Complex calculation results are more prone to human errors hence when automated they give accurate results.
+
+(iv) Data-driven test cases: Test cases which have the same set of steps and run multiple times with the change of data are known as data-driven test cases. Automated testing for these kinds of test cases is quick and cost-effective.
+
+(v) Non-functional test cases: Test cases like load tests and performance tests require a simulated environment with multiple users and multiple hardware or software combinations."
+What are the phases in Automation testing Life Cycle?,"The phases in Automation testing life Cycle include:
+
+The decision to perform automation testing.
+Identify and learn about the automation tool.
+Determine the scope of automation testing.
+Design and develop a test suite.
+Test Execution
+Maintenance of test scripts."
+What is an Automated test script?,"An automated test script is a short program that is written in a programming language to perform a set of instructions on an application under test to verify if the application is as per the requirements.
+
+This program when run, gives the test results as pass or fail to depend on if the application is as per the expectations."

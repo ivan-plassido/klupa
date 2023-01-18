@@ -1,0 +1,117 @@
+How does quality control differ from quality assurance?,"* Quality control is a product-oriented approach of running a program to determine if it has any defects, as well as to make sure that the software meets all of the requirements put forth by the stakeholders.
+* Quality assurance is a process-oriented approach that focuses on making sure that the methods, techniques, and processes used to create quality deliverables are applied correctly."
+What is Software Testing?,"Software Testing is a process used to identify developed software’s correctness, completeness, and quality. It includes a series of activities conducted to find software errors so that it can be corrected before the product is released to the market."
+Why is Software Testing Required?,Software testing is a mandatory process that guarantees that the software product is safe and good enough to be released to the market.
+What are the two main categories of software testing?,"Software testing is a huge domain but it can be broadly categorized into two areas such as :
+
+Manual Testing – This is the oldest type of software testing where the testers manually execute test cases without using any test automation tools. It means the software application is tested manually by QA testers.
+Automation Testing – This is the process of using the assistance of tools, scripts, and software to perform test cases by repeating pre-defined actions. Test Automation focuses on replacing manual human activity with systems or devices that enhance efficiency."
+What different types of manual testing are there?,"Different types of manual testing are;
+
+Black Box Testing
+White Box Testing
+Unit Testing
+System Testing
+Integration Testing
+Acceptance Testing"
+What are the different levels of manual testing?,"Four levels of manual testing are:
+
+Unit testing – It is a way of testing the smallest piece of code referred to as a unit that can be logically isolated in a system. It is mainly focused on the functional correctness of the standalone module.
+Integration Testing – It is a level of software testing where individual units are combined and tested to verify if they are working as they intend to when integrated. The main aim here is to test the interface between the modules.
+System Testing – In system testing all the components of the software are tested as a whole in order to ensure that the overall product meets the requirements specified. There are dozens of types of system testing, including usability testing, regression testing, and functional testing.
+User Acceptance Testing – The final level, acceptance testing, or UAT (user acceptance testing), determines whether or not the software is ready to be released."
+Explain the procedure for manual testing?,"The manual testing process comprises the following steps:
+
+Planning and Control
+Analysis and Design
+Implementation and Execution
+Evaluating exit criteria and Reporting
+Test Closure activities"
+What is the test case?,"A test case is a document that has a set of conditions or actions that are performed on the software application in order to verify the expected functionality of the feature.
+
+Test cases describe a specific idea that is to be tested, without detailing the exact steps to be taken or data to be used. For example, in a test case, you document something like ‘Test if coupons can be applied on actual price‘."
+What is API testing?,"API testing is a type of software testing where application programming interfaces (APIs) are tested to determine if they meet expectations for functionality, reliability, performance, and security. In simple terms, API testing is intended to reveal bugs, inconsistencies or deviations from the expected behavior of an API."
+What’s the difference between verification and validation in testing?,"* Verification: It is a static analysis technique. Here, testing is done without executing the code. Examples include – Reviews, Inspection, and walkthrough.
+* Validation: It is a dynamic analysis technique where testing is done by executing the code. Examples include functional and non-functional testing techniques."
+What’s the difference between a bug and a defect?,"A bug is a just fault in the software that’s detected during testing time. A defect is a variance between expected results and actual results, detected by the developer after the product goes live."
+What are the advantages of manual testing?,"Merits of manual testing are:
+
+It is a cheaper way of testing when compared to automated testing
+Analysis of product from the point of view of the end-user is possible only with manual testing
+GUI testing can be done more accurately with the help of manual testing as visual accessibility and preferences are difficult to automate
+East to learn for new people who have just entered into testing
+It is highly suitable for short-term projects when test-scripts are not going to be repeated and reused for thousands of times
+Best suited when the project is at the early stages of its development
+Highly reliable, since automated tests can contain errors and missed bugs"
+What’s the role of documentation in Manual Testing?,"Documentation plays a critical role in achieving effective software testing. Details like requirement specifications, designs, business rules, inspection reports, configurations, code changes, test plans, test cases, bug reports, user manuals, etc. should all be documented.
+
+Documenting the test cases will facilitate you to estimate the testing effort you will need along with test coverage and tracking and tracing requirement. Some commonly applied documentation artifacts associated with software testing are:
+Test Plan
+Test Scenario
+Test Case
+Traceability Matrix"
+What are the phases involved in Software Testing Life Cycle?,"Requirement Analysis: QA team understands the requirement in terms of what we will testing & figure out the testable requirements.
+Test Planning: In this phase, the test strategy is defined. Objective & the scope of the project is determined.
+Test Case Development: Here, detailed test cases are defined and developed. The testing team also prepares the test data for testing.
+Test Environment Setup: It is a setup of software and hardware for the testing teams to execute test cases.
+Test Execution: It is the process of executing the code and comparing the expected and actual results.
+Test Cycle Closure: It involves calling out the testing team member meeting & evaluating cycle completion criteria based on test coverage, quality, cost, time, critical business objectives, and software."
+Explain the defect life cycle.,"A defect life cycle is a process in which a defect goes through various phases during its whole lifetime. The cycle starts when a defect is found and ends when a defect is closed, after ensuring it’s not reproduced. Bug or defect life cycle includes the steps as shown in the below figure."
+Define what is a critical bug.,A critical bug is a bug that has got the tendency to affect a majority of the functionality of the given application. It means a large piece of functionality or major system component is completely broken and there is no workaround to move further. Application cannot be distributed to the end client unless the critical bug is addressed.
+What is the pesticide paradox? How to overcome it?,"According to pesticide paradox, if the same tests are repeated over and over again, eventually the same test cases will no longer find new bugs. Developers will be extra careful in those places where testers found more defects and might not look into other areas. Methods to prevent pesticide paradox:
+
+ To write a whole new set of test cases to exercise different parts of the software.
+ To prepare new test cases and add them to the existing test cases.
+Using these methods, it’s possible to find more defects in the area where defect numbers dropped."
+What is Defect Cascading in Software Testing?,"Defect Cascading is the process of triggering other defects in the application. When a defect goes unnoticed while testing, it invokes other defects. As a result, multiple defects crop up in the later stages of development. If defect cascading continues to affect other features in the application, identifying the affected feature becomes challenging. You may make different test cases to solve this issue, even then it is difficult and time-consuming."
+"What is black box testing, and what are the various techniques?","Black-Box Testing, also known as specification-based testing, analyses the functionality of a software/application without knowing much about the internal structure/design of the item. The purpose of this testing is to check the system’s functionality as a whole to ensure that it works correctly and meets user demands. Various black-box testing techniques are:
+
+Equivalence Partitioning
+Boundary Value Analysis
+Decision Table Based Technique
+Cause-effect Graphing
+Use Case Testing"
+"What is white box testing, and what are the various techniques?","White-Box Testing also known as structure-based testing, requires a profound knowledge of the code as it includes testing of some structural part of the application. The purpose of this testing is to enhance security, check the flow of inputs/outputs through application and to improve design and usability. Various white-box testing techniques are:
+
+Statement Coverage
+Decision Coverage
+Condition Coverage
+Multiple Condition Coverage"
+What are the Experience-based testing techniques?,"Experienced-based testing is all about discovery, investigation, and learning. The tester constantly studies and analyzes the product and accordingly applies his skills, traits, and experience to develop test strategies and test cases to perform necessary testing. Various experience-based testing techniques are:
+
+Exploratory Testing
+Error Guessing"
+How will you determine when to stop testing?,"Deciding when to stop testing can be quite difficult. Many modern software applications are so complex and run in such an interdependent environment, that complete testing can never be done. Some common factors in deciding when to stop testing are: 
+
+Deadlines (release deadlines, testing deadlines, etc.)
+Test cases completed with certain percentage passed
+When the test budget is depleted
+Coverage of code or functionality or requirements reaches a specified point
+Bug rate falls below a certain level
+When Beta or alpha testing period ends"
+What if the software is so buggy it can’t really be tested at all? ,"Often testers encounter a bug that can’t be resolved at all. In such situations, the best bet is for testers to go through the process of reporting whatever bugs or blocking-type problems initially show up, with the focus being on critical bugs. Since this type of problem can cause severe problems such as insufficient unit testing or insufficient integration testing, poor design, improper build or release procedures, etc managers should be notified and provided with some documentation as evidence of the problem."
+How you test a product if the requirements are yet to freeze?,"It’s possible that a requirement stack is not available for a piece of product. It might take serious effort to determine if an application has significant unexpected functionality, and it would indicate deeper problems in the software development process. If the functionality isn’t necessary to the purpose of the application, it should be removed. Else, create a test plan based on the assumptions made about the product. But make sure you get all assumptions well documented in the test plan"
+How do you know the code has met specifications? ,"‘Good code’ is code that works, that is bug-free, and is readable and maintainable. Most organizations have coding ‘standards’ that all developers are supposed to adhere to, but everyone has different ideas about what’s best, or what is too many or too few rules. There are a lot of tools like traceability matrix which ensures the requirements are mapped to the test cases. And when the execution of all test cases finishes with success, it indicates that the code has met the requirement."
+What are the cases when you’ll consider to choose automated testing over manual testing?,"Automated testing can be considered over manual testing during the following situations:
+
+When tests require periodic execution
+Tests include repetitive steps
+Tests need to be executed in a standard runtime environment
+When you have less time to complete the testing phase
+When there is a lot of code that needs to be repeatedly tested
+Reports are required for every execution"
+What is ‘configuration management’?,"Every high-functioning organization has a “master plan” that details how they are supposed to operate and accomplish tasks. Software development and testing are no different. Software configuration management (SCM) is a set of processes, policies, and tools that organize, control, coordinate, and track:
+
+code
+documentation
+problems
+change requests
+designs and tools
+compilers and libraries"
+Why is it impossible to test a program thoroughly or 100% bug-free?,"It is impossible to build a software product that is 100% bug-free. You can just minimize the error, flaw, failure, or fault in a computer program or system that causes it to produce an incorrect or unexpected result.
+
+Here are the two principal reasons that make it impossible to test a program entirely.
+
+Software specifications can be subjective and can lead to different interpretations.
+A software program might require too many inputs, outputs, and path combinations to test."
+Can automation testing replace manual testing?,"Automation testing isn’t a replacement for manual testing. No matter how good automated tests are, you cannot automate everything. Manual tests play an important role in software development and come in handy whenever you have a case where you cannot use automation. Automated and manual testing each have their own strengths and weaknesses. Manual testing helps us understand the entire problem and more flexibly explore other angles of tests. On the other hand, automated testing helps save time in the long run by accomplishing a large number of surface-level tests in a short time."

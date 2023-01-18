@@ -1,0 +1,63 @@
+What is API?,"API (Application Programming Interface) helps in communication and data exchange between two software systems. API act as an interface between two applications and allows the two software systems communicate with one another. API is a collection of functions which can be executed by another software program.
+
+API works as; it takes a request from the source, takes that request to the database, fetches the request data from the database and returns a response to the source. API takes the requests from the user and gives the response without exposing the internal details. API acts as Abstraction."
+What is API testing?,"API testing is a type of software testing that involves testing APIs directly. API is a part of integration testing to check whether the API meets expectations in terms of functionality, reliability, performance, and security of applications. Multiple API system can performed API testing. In API testing, our primary focus is on Business Logic Layer of the software architecture."
+What are the types of API testing?,"API testing involves the following types of testing:
+
+Unit Testing
+Functional Testing
+Load Testing
+Runtime/Error Detection
+Security Testing
+UI Testing
+Interoperability and WS compliance Testing
+Penetration Testing
+Fuzz Testing"
+What are the protocols used in API Testing?,"Protocols used in API testing are:
+
+HTTP
+REST
+SOAP
+JMS
+UDDI"
+What are the tools used for API Testing?,"Tools used for API testing are:
+
+Parasoft SOAtest
+PostMan
+AlertSite API monitoring"
+What is API test environment?,"For API the test environment is a quite complex method where the configuration of server and database is done as per the requirement of the software application. API testing does not involve graphical user interface (GUI).
+
+API is checked for its proper functioning after installation."
+What is API framework?,API framework is described by the config. File which consist of the list of all APIs that are required to be activated and are activated for any particular program run. This is essential as every test run does not require all APIs.
+What are the limits of API usage?,"Many APIs have certain limit set up by the provider. Hence, try to estimate our usage and understand how that will impact the overall cost of the offering."
+What are the advantages of API testing?,"Advantages of API testing are:
+
+* Test for core functionality: API testing provides access to the application without the user interface. The core functionality of the application will be tested before the GUI tests. This will help to detect the minor issue which can become bigger during the GUI testing.
+* Time effective: API testing is less time consuming than GUI testing. Particularly, API test requires less code so it can provide better and faster test coverage compare to GUI test automation. This will reduce the cost for the testing project.
+* Language Independent: In API testing data is exchange using XML or JSON. These transfer mode are completely language-independent, which allows users to select any code language when adopting automation test service for the project.
+* Easy Integration with GUI: API tests provide highly integrable tests which is useful to perform functional GUI tests after GUI tests. Simple integration would allow new user accounts to be created within the application before GUI started."
+What is API framework?,A framework or software framework is a platform for developing software applications. API framework is a foundation on which software developer can build applications for a specific platform.
+What is API documentation?,"A good documentation is must for any foundation. API documentation serves as quick reference for accessing library or working within a program.
+
+When we use any such documents, it must consists of proper plan, content source, proper layout, information related to each function etc.
+
+There are various documentation tools like Doxygen and JavaDoc. Here, are the functions which are documented which revolve around the parameters like:
+
+Function description
+Type and syntax of error message that may occure
+Syntax, elements and sequence needed for each parameter
+Links regarding functions"
+What is the most used template for API documentation?,Swagger
+What are the difference between API testing and UI testing?,"UI (User Interface) testing means the testing of the graphical user interface. The focus of UI testing is on the look and feel of the application. In user interface testing the main focus is on how users can interact with app elements such as images, fonts, layout etc. are checked.
+
+API testing allows the communication between two software systems. API testing works on backend also known as backend testing."
+What is SOAP?,SOAP (Simple Object Access Control) . It is an XML based protocol that helps in exchanging information among computers.
+What is REST API?,"REST API is a set of function helps the developers performing requests when the response is receiving. Through HTTP protocol interaction is made in REST API.
+REST is defined as Representational state transfer. It is an effective standard for API creation."
+What are the components of an HTTP request?,"An HTTP request have five components. These are:
+
+* Action showing HTTP method like GET, PUT, POST, DELETE.
+* Uniform Resource Identifier (URI): URI is the identifier for the resource on the server.
+* HTTP version: Indicate the HTTP version like- HTTP V1.1.
+* Request Header: Request Header carries metadata for the HTTP request message. Metadata could be a client type, format supported by the client, format of a message body, cache setting etc.
+* Request Body: Resource body indicates message content or resource representation."

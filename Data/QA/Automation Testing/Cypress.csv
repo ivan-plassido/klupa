@@ -1,0 +1,49 @@
+How can you define the Cypress testing tool?,"Cypress is a Javascript-based front-end testing tool. It has been written in node js. The tool is helpful in executing tests in a browser. This way, it can help make the entire testing process more reliable and much easier. "
+How will you install Cypress?,"To install Cypress, we will first have to install Node. once done, we can then install Cypress with the command - npm install cypress."
+Can you define the Cypress architecture?,"Behind this tool is a Node server process. The Node process and Cypress consistently synchronise, communicate and execute tasks on behalf of each other. Not just that, Cypress also operates at a network layer by altering and reading web traffic simultaneously. This helps Cypress in modifying everything coming from the browser. In addition to this, the tool also becomes capable of changing code that could interfere with its capability to automate the entire browser. "
+What are the primary features of Cypress?,"Some of the major features of Cypress include:
+
+This tool can run tests and execute commands on the browser; thus, the tests are much fast and less flaky.
+It can take snapshots of tests after the execution of every step. This way, you won’t need any additional plugins.
+Cypress also offers network traffic control, inbuilt assertions and automatic wait. "
+What are the advantages of Cypress?,"Some of the significant advantages of Cypress include:
+
+Cypress works with Internal Ajax Calls and Single Page Applications.
+It is capable of executing commands easily and faster in comparison to tools based on Selenium.
+This tool can easily take screenshots of tests; thus, we don’t need to have any configuration with it.
+It can run tests and execute commands on the browser."
+What are the disadvantages of Cypress?,"Some of the major drawbacks of Cypress include:
+
+It only supports JavaScript.
+It is only available for web testing.
+It doesn’t support multiple tabs.
+It doesn’t support Iframes. "
+What do you mean by Cypress CLI?,"Cypress CLI is helpful in offering the capability for running the Cypress tests in Command-Line. It is one such feature that is used to run the Cypress tests in the Pipelines. Moreover, it also offers Flags Control and Options of the Cypress Test Behaviour. "
+Name some browsers that Cypress supports.,"Cypress supports:
+
+Electron
+Firefox
+Edge
+Chromium
+Chrome"
+How can you differentiate Cypress from Selenium?,"* Cypress supports just Typescript and JavaScript languages. On the other hand, Selenium supports all the major languages, such as C#, Python, Java, Ruby, JavaScript, and more.
+* While Selenium supports all major browsers, Cypress supports just a few of them.
+* In Selenium, the configuration is difficult. In Cypress, you can find ready-to-use frameworks. "
+What are the testing frameworks that come with Cypress?,"Cypress is available with Chai and Mocha assertion libraries. However, we cannot use the TestNG or Junit in Cypress. "
+How can you interact with DOM elements in Cypress?,We can use CSS Selector to interact with DOM elements in Cypress.
+Can you use BDD with Cypress?,"Cypress doesn’t provide any official inbuilt support for BDD. However, the NPM Cypress-Cucumber-Preprocessor plugin lets you write tests in BDD Cucumber Syntax. And then, it will automatically translate the same into Cypress."
+What do you mean by hooks in Cypress?,"Cypress hooks are generally used to set or define preconditions that we wish to execute either before every test or before a set of tests. Some of the available hooks are afterEach( ), after ( ), beforeEach ( ), and before ( ). "
+How will you manage reusability in the Cypress framework?,"Cypress comprises, by default, the commands.js and index.js in the Support folder. Index.js runs before each test file. We can put the reusable behaviour, such as global override and custom commands in this folder.  "
+Define the components of Cypress.,"Jotted down below are the major components of Cypress:
+
+Test Runner: It tests in an interactive runner, which further helps by letting you see the command and execute the same while viewing the application that is under the test.
+App Preview: It helps in seeing the tests while executing the commands.
+Test Status: It assists in displaying a summary of what tests are in Progress and have Failed or Passed.
+Command Log: It showcases the command logs while executing the tests.
+URL Preview: It displays the URL of the test and assists in tracking the entire URL Route.
+Viewport Sizing: It helps in setting the app viewport size for testing varying layouts. "
+What do you mean by automation in Cypress?,"Cypress automation is a process that runs a Test Code with the app. This test can’t be executed in a single loop. However, it takes place in a Single Browser. Node.js Server is generally used in the tasks that happen outside. "
+Define Cypress run.,"Cypress Run assists in executing the Cypress tests in Headless Browsers. It also assists in opening a New Browser Tab. along with that, it’s also helpful in loading the tool at the URL Cypress, which was earlier installed from the same. Cypress assists in discovering cypress.json. Moreover, it continues to run tests on the webpack monitor. "
+What selectors does Cypress support?,"By default, this tool only supports CSS selectors. But, we can also use third-party plugins to use the Xpath selectors. "
+How will you open the Cypress window and execute tests?,"Once we have installed Cypress, we can open it using the npm cypress open command. And then, by clicking on the test file name, we can execute the tests. "
+How to see the default configuration in this tool?,"The default configuration can be seen Under on Cypress window Test Runner. There, you will have to click Settings and Configurations. "
