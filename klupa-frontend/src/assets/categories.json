@@ -1,0 +1,42 @@
+[
+    {
+        "id": "b2cf3cdc-0fe0-4914-8c5b-0a6af1527a73",
+        "parentId": null,
+        "name": "Dev Frontend"
+    },
+    {
+        "id": "1158651f-8651-4e1d-b9bc-9d444781c010",
+        "parentId": null,
+        "name": "Dev Backend"
+    },
+    {
+        "id": "75b8eeb0-ba4a-41ad-a2c4-11e06598812d",
+        "parentId": null,
+        "name": "QA"
+    },
+    {
+        "id": "2544b6c1-f8f3-4663-b7b7-b43314ac5c0d",
+        "parentId": "b2cf3cdc-0fe0-4914-8c5b-0a6af1527a73",
+        "name": "Angular"
+    },
+    {
+        "id": "c2ecc78c-00c0-4d18-ac88-406df66afd96",
+        "parentId": "b2cf3cdc-0fe0-4914-8c5b-0a6af1527a73",
+        "name": "JavaScript"
+    },
+    {
+        "id": "57d53d2f-6758-4f3e-8a84-d64c6f1e8108",
+        "parentId": "b2cf3cdc-0fe0-4914-8c5b-0a6af1527a73",
+        "name": "TypeScript"
+    },
+    {
+        "id": "48f2a1a8-4a71-4bbf-b5fe-60e542400d0f",
+        "parentId": "1158651f-8651-4e1d-b9bc-9d444781c010",
+        "name": "Java"
+    },
+    {
+        "id": "46f3302f-eb6a-4914-92c7-cbd5986b100f",
+        "parentId": "1158651f-8651-4e1d-b9bc-9d444781c010",
+        "name": "Spring"
+    }
+]
