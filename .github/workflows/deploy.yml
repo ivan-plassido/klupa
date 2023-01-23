@@ -56,7 +56,6 @@ jobs:
 
       - name: Compile the data
         run: |
-          mkdir './data'
           echo '{db:{text:"Hello World"}}' > ./data/db.json
 
       - name: Upload data artifact
