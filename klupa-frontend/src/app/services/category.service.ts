@@ -9,7 +9,7 @@ import Category from '../models/category.model';
 })
 export class CategoryService {
 
-  private CATEGORIES_ENDPOINT = "/assets/categories.json"; // TODO: replace mock after backend is finished
+  private CATEGORIES_ENDPOINT = "/assets/categories/categories.json"; // TODO: replace mock after backend is finished
 
   constructor(private http: HttpClient) { }
 
