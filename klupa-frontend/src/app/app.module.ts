@@ -1,13 +1,13 @@
+import { HttpClientModule } from "@angular/common/http";
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
-import { HttpClientModule } from "@angular/common/http";
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MarkdownModule } from 'ngx-markdown';
 import { AngularMaterialModule } from './angular-material.module';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CategoriesComponent } from './components/categories/categories.component';
+import { QuestionActionsComponent } from './components/question-actions/question-actions.component';
 import { QuestionsComponent } from './components/questions/questions.component';
 import { CategoryResolver } from './resolvers/category.resolver';
 import { ChildCategoriesResolver } from './resolvers/child-categories.resolver';
@@ -19,7 +19,8 @@ import { QuestionService } from './services/question.service';
   declarations: [
     AppComponent,
     CategoriesComponent,
-    QuestionsComponent
+    QuestionsComponent,
+    QuestionActionsComponent
   ],
   imports: [
     BrowserModule,
