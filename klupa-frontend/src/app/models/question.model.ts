@@ -3,4 +3,5 @@ export default interface Question {
     categoryId: string,
     question: string,
     answer: string,
+    favorite: boolean
 }

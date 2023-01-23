@@ -23,10 +23,11 @@ export class QuestionsComponent implements AfterViewInit {
   @ViewChild('paginator', { static: false }) paginator: MatPaginator;
 
   questions: MatTableDataSource<Question[]> | any;
-  questionColumns: string[] = ['question'];
+  questionColumns: string[] = ['question', 'actions'];
   expandedRow: Question | null;
   selectedCategory: Category;
   pageSize = localStorage.getItem('questions-page-size') ? Number(localStorage.getItem('questions-page-size')) : 10;
+
 
   constructor(
     private route: ActivatedRoute, private router: Router) {
