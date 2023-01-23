@@ -1,6 +1,6 @@
 import { animate, state, style, transition, trigger } from '@angular/animations';
 import { AfterViewInit, Component, ViewChild } from '@angular/core';
-import { MatPaginator } from '@angular/material/paginator';
+import { MatPaginator, PageEvent } from '@angular/material/paginator';
 import { MatTableDataSource } from '@angular/material/table';
 import { ActivatedRoute, Router } from '@angular/router';
 import Category from 'src/app/models/category.model';
@@ -26,6 +26,7 @@ export class QuestionsComponent implements AfterViewInit {
   questionColumns: string[] = ['question'];
   expandedRow: Question | null;
   selectedCategory: Category;
+  pageSize = localStorage.getItem('questions-page-size') ? Number(localStorage.getItem('questions-page-size')) : 10;
 
   constructor(
     private route: ActivatedRoute, private router: Router) {
@@ -40,6 +41,10 @@ export class QuestionsComponent implements AfterViewInit {
 
   ngAfterViewInit() {
     this.questions.paginator = this.paginator;
+  }
+
+  onPage(event: PageEvent) {
+    localStorage.setItem('questions-page-size', event.pageSize.toString())
   }
 
 }
