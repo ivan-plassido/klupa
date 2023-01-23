@@ -82,13 +82,13 @@ jobs:
         uses: actions/configure-pages@v2
 
       - name: Download app artifact
-      - uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v3
         with:
           name: app-artifact
           path: './deploy'
 
       - name: Download data artifact
-      - uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v3
         with:
           name: data-artifact
           path: './deploy/db'
