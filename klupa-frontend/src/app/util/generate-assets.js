@@ -1,9 +1,18 @@
-const csvDir = '../../../../Data/csv';
-const assetsDirQuestions = '../../assets/questions/'
-const assetsDirCategories = '../../assets/categories/'
+/**
+ * Script parses CSV files recursively found inside CSV_ROOT_PATH
+ * and generates categories and questions JSON files
+ * CSV files should have question in first and answer in second column
+ */
+
+// CONFIGURATION BEGIN
+const CSV_ROOT_PATH = '../../../../Data/csv';
+const QUESTION_ASSETS_PATH = '../../assets/questions/';
+const CATEGORY_ASSETS_PATH = '../../assets/categories/';
+// CONFIGURATION END
+
 const fs = require('fs');
 const papa = require('papaparse');
-const { v4: uuidv4 } = require('uuid')
+const { v4: uuidv4 } = require('uuid');
 
 categories = [];
 questions = [];
@@ -14,7 +23,7 @@ generateCategoriesAsset(categories);
 
 function generateAssets(path, parentId, categories) {
     if (path === null) {
-        path = csvDir;
+        path = CSV_ROOT_PATH;
     }
     fs.readdirSync(path, { withFileTypes: true }).forEach(
         file => {
@@ -39,30 +48,33 @@ function generateQuestionsAsset(filePath, categoryId) {
     fs.readFile(filePath, 'utf8', (err, file) => {
         const questions = [];
         papa.parse(file, {
-            header: false,
-            columns: [
-                "question", "answer"
-            ],
+            skipEmptyLines: true,
             step: function (row) {
                 questions.push({ question: row.data[0], answer: row.data[1], id: uuidv4(), categoryId: categoryId });
             },
             complete: function () {
-                fs.writeFile(`${assetsDirQuestions}/${categoryId}.json`, JSON.stringify(questions), 'utf8', () => { });
+                const questionsPath = `${QUESTION_ASSETS_PATH}${categoryId}.json`;
+                fs.writeFile(questionsPath, JSON.stringify(questions), 'utf8', () => { });
+                console.log('Created questions: ' + questionsPath);
             }
         });
     });
 }
 
 function generateCategoriesAsset(categories) {
-    fs.writeFile(`${assetsDirCategories}/categories.json`, JSON.stringify(categories), 'utf8', () => { });
+    const categoriesPath = `${CATEGORY_ASSETS_PATH}categories.json`;
+    fs.writeFile(categoriesPath, JSON.stringify(categories), 'utf8', () => { });
+    console.log('Created categories: ' + categoriesPath);
 }
 
 function deleteOldAssets() {
-    fs.readdirSync(assetsDirQuestions).forEach(file => {
-        fs.unlinkSync(assetsDirQuestions + file);
+    fs.readdirSync(QUESTION_ASSETS_PATH).forEach(file => {
+        fs.unlinkSync(QUESTION_ASSETS_PATH + file);
     });
-    fs.readdirSync(assetsDirCategories).forEach(file => {
-        fs.unlinkSync(assetsDirCategories + file);
+    console.log('Deleted old question assets');
+    fs.readdirSync(CATEGORY_ASSETS_PATH).forEach(file => {
+        fs.unlinkSync(CATEGORY_ASSETS_PATH + file);
     });
+    console.log('Deleted old category assets');
 }
 
