@@ -1,0 +1,5 @@
+spring:
+  data:
+    mongodb:
+      uri: mongodb+srv://klupa:Plassido2023@klupa.5mb9uaf.mongodb.net/klupa?retryWrites=true&w=majority
+      database: klupa
