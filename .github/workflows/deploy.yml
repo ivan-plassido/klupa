@@ -42,7 +42,7 @@ jobs:
         run: |
           cd klupa-frontend
           npm ci
-          npm run build
+          npm run build-github
 
       - name: Upload app artifact
         uses: actions/upload-artifact@v3
