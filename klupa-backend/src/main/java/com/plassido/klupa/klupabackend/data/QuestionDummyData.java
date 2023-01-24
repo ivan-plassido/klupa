@@ -1,10 +1,12 @@
 package com.plassido.klupa.klupabackend.data;
 
 import com.plassido.klupa.klupabackend.model.Question;
+import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
 import java.util.List;
 
+@Component
 public class QuestionDummyData {
 
     public Question createQuestion(String id, String categoryId, String title, String question, String answer) {

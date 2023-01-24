@@ -1,9 +1,12 @@
 package com.plassido.klupa.klupabackend.data;
 
 import com.plassido.klupa.klupabackend.model.Category;
+import org.springframework.stereotype.Component;
+import org.springframework.web.bind.annotation.RestController;
 
 import java.util.ArrayList;
 import java.util.List;
+@Component
 public class CategoryDummyData {
 
     public CategoryDummyData() {

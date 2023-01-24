@@ -2,6 +2,7 @@ package com.plassido.klupa.klupabackend.service;
 
 import com.plassido.klupa.klupabackend.data.CategoryDummyData;
 import com.plassido.klupa.klupabackend.model.Category;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -9,6 +10,7 @@ import java.util.List;
 @Service
 public class CategoryService {
 
+    @Autowired
     private final CategoryDummyData categoryDummyData;
 
     public CategoryService(CategoryDummyData categoryDummyData) {
