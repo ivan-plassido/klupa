@@ -16,5 +16,4 @@ public class Category {
     @Nullable
     private String parentId;
     private String name;
-//    private String description;
 }

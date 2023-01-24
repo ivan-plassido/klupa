@@ -12,9 +12,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
 @Setter
 @ToString
 public class Question {
-
     private String _id;
-//    private String title;
     private String question;
     private String answer;
     private String categoryId;
