@@ -7,7 +7,7 @@ import Question from '../models/question.model';
   providedIn: 'root'
 })
 export class QuestionService {
-  private QUESTIONS_ENDPOINT = "/assets/questions/"; // TODO: replace mock after backend is finished
+  private QUESTIONS_ENDPOINT = 'assets/questions/'; // TODO: replace mock after backend is finished
 
   constructor(private http: HttpClient) { }
 
