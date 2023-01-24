@@ -33,16 +33,22 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
 
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16
+
       - name: Build the app
         run: |
-          mkdir './app'
-          echo 'Hello World' > ./app/index.html
+          cd klupa-frontend
+          npm ci
+          npm run build
 
       - name: Upload app artifact
         uses: actions/upload-artifact@v3
         with:
           name: app-artifact
-          path: './app'
+          path: './klupa-frontend/dist/klupa-frontend'
 
 
   # Build the data artifact
