@@ -20,7 +20,7 @@ export class CategoriesComponent {
     this.route.data.subscribe(({ category, childCategories, questions }) => {
       this.childCategories = childCategories;
       if (questions && questions.length > 0) {
-        this.router.navigateByUrl('/categories/' + category.id + '/questions');
+        this.router.navigateByUrl('/categories/' + category.id + '/questions', { replaceUrl: true });
       }
     })
   }
