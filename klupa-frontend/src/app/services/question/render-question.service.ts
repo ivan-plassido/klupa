@@ -1,19 +1,19 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { catchError, Observable, of } from 'rxjs';
-import Question from '../models/question.model';
+import { RENDER_API_URL } from 'src/app/environment';
+import Question from 'src/app/models/question.model';
+import { IQuestionService } from './question.service';
 
 @Injectable({
   providedIn: 'root'
 })
-export class QuestionService {
-  private QUESTIONS_ENDPOINT = 'assets/questions/'; // TODO: replace mock after backend is finished
+export class RenderQuestionService implements IQuestionService {
 
   constructor(private http: HttpClient) { }
 
   getCategoryQuestions(categoryId: string | null): Observable<Question[]> {
-    const path = this.QUESTIONS_ENDPOINT + categoryId + '.json';
-    return this.http.get<Question[]>(path).pipe(
+    return this.http.get<Question[]>(RENDER_API_URL + '/api/question/category-questions/' + categoryId).pipe(
       catchError(() => {
         return of([]);
       })

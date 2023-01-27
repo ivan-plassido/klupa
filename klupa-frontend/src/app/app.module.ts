@@ -12,8 +12,16 @@ import { QuestionsComponent } from './components/questions/questions.component';
 import { CategoryResolver } from './resolvers/category.resolver';
 import { ChildCategoriesResolver } from './resolvers/child-categories.resolver';
 import { QuestionsResolver } from './resolvers/questions.resolver';
-import { CategoryService } from './services/category.service';
-import { QuestionService } from './services/question.service';
+import { AssetsCategoryService } from "./services/category/assets-category.service";
+import { CategoryServiceFactory } from "./services/category/category-service.factory";
+import { CategoryService } from './services/category/category.service';
+import { DedicatedCategoryService } from "./services/category/dedicated-category.service";
+import { RenderCategoryService } from "./services/category/render-category.service";
+import { AssetsQuestionService } from "./services/question/assets-question.service";
+import { DedicatedQuestionService } from "./services/question/dedicated-question.service";
+import { QuestionServiceFactory } from "./services/question/question-service.factory";
+import { QuestionService } from "./services/question/question.service";
+import { RenderQuestionService } from "./services/question/render-question.service";
 
 @NgModule({
   declarations: [
@@ -30,7 +38,20 @@ import { QuestionService } from './services/question.service';
     AngularMaterialModule,
     MarkdownModule.forRoot()
   ],
-  providers: [CategoryService, QuestionService, CategoryResolver, QuestionsResolver, ChildCategoriesResolver],
+  providers: [
+    CategoryService,
+    CategoryServiceFactory,
+    DedicatedCategoryService,
+    RenderCategoryService,
+    AssetsCategoryService,
+    QuestionService,
+    QuestionServiceFactory,
+    DedicatedQuestionService,
+    RenderQuestionService,
+    AssetsQuestionService,
+    CategoryResolver,
+    QuestionsResolver,
+    ChildCategoriesResolver],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
