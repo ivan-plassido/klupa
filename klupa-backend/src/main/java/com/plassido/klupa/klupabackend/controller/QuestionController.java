@@ -15,10 +15,12 @@ public class QuestionController {
     private final QuestionService questionService;
 
     @GetMapping("/{categoryId}")
+    @CrossOrigin
     List<Question> getCategoryQuestions(@PathVariable String categoryId) {
         return questionService.getCategoryQuestions(categoryId);
     }
     @PostMapping("/toggleFavorite")
+    @CrossOrigin
     void toggleFavorite(@RequestBody String questionId) {
         questionService.toggleFavorite(questionId);
     }
