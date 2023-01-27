@@ -3,10 +3,7 @@ package com.plassido.klupa.klupabackend.controller;
 import com.plassido.klupa.klupabackend.model.Question;
 import com.plassido.klupa.klupabackend.service.QuestionService;
 import lombok.RequiredArgsConstructor;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -20,5 +17,9 @@ public class QuestionController {
     @GetMapping("/{categoryId}")
     List<Question> getCategoryQuestions(@PathVariable String categoryId) {
         return questionService.getCategoryQuestions(categoryId);
+    }
+    @PostMapping("/toggleFavorite")
+    void toggleFavorite(@RequestBody String questionId) {
+        questionService.toggleFavorite(questionId);
     }
 }

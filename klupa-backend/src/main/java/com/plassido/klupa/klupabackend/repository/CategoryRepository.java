@@ -14,6 +14,6 @@ public interface CategoryRepository extends MongoRepository<Category, String> {
     @Query("{_id : '?0'}")
     Category getCategoryById(String categoryId);
 
-    @Query("{parentId : '?0'}")
+    @Query("{parentId : ?0}")
     List<Category> getChildCategories(String parentId);
 }
