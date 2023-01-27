@@ -1,6 +1,5 @@
 export default interface Category {
-    id: string,
+    _id: string,
     parentId: string | null,
-    name: string,
-    description?: string
+    name: string
 }

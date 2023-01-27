@@ -1,6 +1,19 @@
 <div class="toolbar" role="banner">
   <img width="70" alt="Klupa Logo" src="https://cdn.pixabay.com/photo/2012/04/12/11/31/wooden-29595_1280.png"
     [routerLink]="['/']" />
+
+</div>
+<div class="source" *ngIf="showSources">
+  {{ currentSource }}<br>
+  <mat-icon (click)="isSourceOpen = !isSourceOpen" cdkOverlayOrigin
+    #trigger="cdkOverlayOrigin">settings_input_component</mat-icon>
+  <ng-template cdkConnectedOverlay [cdkConnectedOverlayOrigin]="trigger" [cdkConnectedOverlayOpen]="isSourceOpen">
+    <ul class="source-list">
+      <li (click)="setApiSource(sources.Assets)">assets</li>
+      <li (click)="setApiSource(sources.Render)">render.com</li>
+      <li (click)="setApiSource(sources.Dedicated)">dedicated</li>
+    </ul>
+  </ng-template>
 </div>
 
 <svg id="clouds" xmlns="http://www.w3.org/2000/svg" width="2611.084" height="485.677" viewBox="0 0 2611.084 485.677">
@@ -11,4 +24,6 @@
 <div class="spinner-container" *ngIf="loading">
   <mat-spinner diameter="25"></mat-spinner>
 </div>
+
+
 <router-outlet></router-outlet>

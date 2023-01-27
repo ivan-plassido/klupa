@@ -42,3 +42,40 @@ svg#clouds {
 mat-spinner {
     margin: auto;
 }
+
+.source {
+    display: inline;
+    position: absolute;
+    float: right;
+    top: 0;
+    right: 20px;
+    color: white;
+
+    mat-icon {
+        display: inline;
+        float: right;
+        color: black;
+        padding-top: 5px;
+
+        &:hover {
+            color: white;
+            cursor: pointer;
+        }
+    }
+}
+
+.source-list {
+    list-style: none;
+
+    li {
+        padding: 10px;
+        background-color: grey;
+        color: white;
+        border: 1px solid white;
+
+        &:hover {
+            cursor: pointer;
+            background-color: green;
+        }
+    }
+}

@@ -1,3 +1,4 @@
+import { OverlayModule } from '@angular/cdk/overlay';
 import { NgModule } from '@angular/core';
 import { MatIconModule } from '@angular/material/icon';
 import { MatPaginatorModule } from '@angular/material/paginator';
@@ -9,13 +10,16 @@ import { MatTableModule } from '@angular/material/table';
         MatTableModule,
         MatProgressSpinnerModule,
         MatPaginatorModule,
-        MatIconModule
+        MatIconModule,
+        OverlayModule
+
     ],
     exports: [
         MatTableModule,
         MatProgressSpinnerModule,
         MatPaginatorModule,
-        MatIconModule
+        MatIconModule,
+        OverlayModule
     ]
 })
 export class AngularMaterialModule { }

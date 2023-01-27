@@ -31,7 +31,7 @@ function generateAssets(path, parentId, categories) {
             if (file.isDirectory()) {
                 const categoryId = uuidv4();
                 categories.push({
-                    id: categoryId,
+                    _id: categoryId,
                     parentId,
                     name: file.name
                 });
@@ -50,7 +50,7 @@ function generateQuestionsAsset(filePath, categoryId) {
         papa.parse(file, {
             skipEmptyLines: true,
             step: function (row) {
-                questions.push({ question: row.data[0], answer: row.data[1], id: uuidv4(), categoryId: categoryId });
+                questions.push({ question: row.data[0], answer: row.data[1], _id: uuidv4(), categoryId: categoryId });
             },
             complete: function () {
                 const questionsPath = `${QUESTION_ASSETS_PATH}${categoryId}.json`;
