@@ -14,7 +14,4 @@ public interface QuestionRepository extends MongoRepository<Question, String> {
 
     @Query("{_id : '?0'}")
     Question getQuestionById(String questionId);
-
-//    @Query("{_id : '?0', favourite: true}")
-//    void (String _id);
 }
