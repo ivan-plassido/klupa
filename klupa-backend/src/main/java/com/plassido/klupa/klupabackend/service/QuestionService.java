@@ -13,20 +13,8 @@ import java.util.List;
 public class QuestionService {
 
     private final QuestionRepository questionRepository;
-    private final MongoTemplate mongoTemplate;
 
     public List<Question> getCategoryQuestions(String categoryId) {
         return questionRepository.getCategoryQuestions(categoryId);
-    }
-
-    public void toggleFavorite(String questionId) {
-        Question question = questionRepository.getQuestionById(questionId);
-        Boolean favourite = question.getFavorite();
-        if (favourite == null ) {
-            question.setFavorite(true);
-        } else {
-            question.setFavorite(!question.getFavorite());
-        }
-        questionRepository.save(question);
     }
 }

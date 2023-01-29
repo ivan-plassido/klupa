@@ -15,4 +15,7 @@ public interface FavoriteQuestionRepository extends MongoRepository<FavoriteQues
 
     @Query("{questionId : '?0', userEmail: '?1'}")
     FavoriteQuestion getQuestionByQuestionIdAndEmail(String questionId, String userEmail);
+
+    void deleteByQuestionIdAndUserEmail(String questionId, String userEmail);
+
 }
