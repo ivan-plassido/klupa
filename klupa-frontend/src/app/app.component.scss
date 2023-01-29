@@ -33,7 +33,7 @@ svg#clouds {
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 9999;
+    z-index: 999;
     width: 100vw;
     height: 100vh;
     transition: opacity 0.2s;
@@ -44,6 +44,7 @@ mat-spinner {
 }
 
 .source {
+    z-index: 1000;
     background-color: #1976d2;
     position: fixed;
     bottom: 20px;
@@ -85,6 +86,7 @@ mat-spinner {
 }
 
 .source-list {
+    z-index: 1000;
     list-style: none;
 
     li {
