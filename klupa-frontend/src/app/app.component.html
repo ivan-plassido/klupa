@@ -4,15 +4,28 @@
 
 </div>
 <div class="source" *ngIf="showSources">
-  {{ currentSource }}<br>
-  <mat-icon (click)="isSourceOpen = !isSourceOpen" cdkOverlayOrigin
-    #trigger="cdkOverlayOrigin">settings_input_component</mat-icon>
-  <ng-template cdkConnectedOverlay [cdkConnectedOverlayOrigin]="trigger" [cdkConnectedOverlayOpen]="isSourceOpen">
-    <ul class="source-list">
-      <li (click)="setApiSource(sources.Assets)">assets</li>
-      <li (click)="setApiSource(sources.Render)">render.com</li>
-      <li (click)="setApiSource(sources.Dedicated)">dedicated</li>
-    </ul>
+  <div class="source-inner">
+    <div class="current-source">{{ currentSource }}</div>
+    <mat-icon (click)="isSourceOpen = !isSourceOpen" cdkOverlayOrigin
+      #trigger="cdkOverlayOrigin">settings_input_component</mat-icon>
+    <ng-template cdkConnectedOverlay [cdkConnectedOverlayOrigin]="trigger" [cdkConnectedOverlayOpen]="isSourceOpen">
+      <ul class="source-list">
+        <li (click)="setApiSource(sources.Assets)">assets</li>
+        <li (click)="setApiSource(sources.Render)">render.com</li>
+        <li (click)="setApiSource(sources.Dedicated)">dedicated</li>
+      </ul>
+    </ng-template>
+  </div>
+</div>
+
+<div class="auth" *ngIf="currentSource !== sources.Assets">
+  <ng-container *ngIf="!isSignedIn; else signedIn">
+    <h5 (click)="showSignInDialog()">Sign In</h5>
+    <h5 (click)="showSignUpDialog()">Sign Up</h5>
+  </ng-container>
+  <ng-template #signedIn>
+    <div>{{ user.email }}</div>
+    <h5 class="sign-out" (click)="signOut()">Sign Out</h5>
   </ng-template>
 </div>
 
