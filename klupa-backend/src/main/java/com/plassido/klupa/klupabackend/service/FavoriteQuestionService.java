@@ -33,7 +33,9 @@ public class FavoriteQuestionService {
         favoriteQuestionRepository.insert(favoriteQuestion);
     }
 
-    public void deleteFavoriteQuestion(String id) {
-        favoriteQuestionRepository.deleteById(id);
+    public void deleteFavoriteQuestion(String questionId, String userEmail) {
+        final var existingQuestion = favoriteQuestionRepository.getQuestionByQuestionIdAndEmail(questionId, userEmail);
+
+        favoriteQuestionRepository.deleteByQuestionIdAndUserEmail(questionId, userEmail);
     }
 }

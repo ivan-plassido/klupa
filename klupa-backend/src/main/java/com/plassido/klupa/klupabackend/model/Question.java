@@ -16,5 +16,4 @@ public class Question {
     private String question;
     private String answer;
     private String categoryId;
-    private Boolean favorite = false;
 }
