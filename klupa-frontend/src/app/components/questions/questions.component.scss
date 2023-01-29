@@ -33,4 +33,15 @@
     .actions-container {
         text-align: center;
     }
+
+    mat-tab-group {
+        width: 100% !important;
+        text-align: center;
+    }
+
+    .no-questions {
+        padding-top: 25px;
+        padding-bottom: 10px;
+        border-bottom: 1px solid #3f51b5;
+    }
 }

@@ -13,8 +13,15 @@ export class QuestionService {
   getCategoryQuestions(categoryId: string | null): Observable<Question[]> {
     return this.factory.getService().getCategoryQuestions(categoryId);
   }
+
+  getFavoriteQuestions(categoryId: string | null): Observable<Question[]> {
+    return this.factory.getService().getFavoriteQuestions(categoryId);
+  }
 }
 
 export interface IQuestionService {
   getCategoryQuestions(categoryId: string | null): Observable<Question[]>;
+  getFavoriteQuestions(categoryId: string | null): Observable<Question[]>;
+  addFavoriteQuestion(questionId: string | null): Observable<void>;
+  deleteFavoriteQuestion(questionId: string | null): Observable<void>;
 }

@@ -20,4 +20,19 @@ export class AssetsQuestionService implements IQuestionService {
       })
     );
   }
+
+  // not applicable to assets
+  getFavoriteQuestions(categoryId: string): Observable<Question[]> {
+    return of([]);
+  }
+
+  // not applicable to assets
+  addFavoriteQuestion(questionId: string | null): Observable<any> {
+    return of(null);
+  }
+
+  // not applicable to assets
+  deleteFavoriteQuestion(questionId: string | null): Observable<any> {
+    return of(null);
+  }
 }

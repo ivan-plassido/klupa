@@ -1,3 +1,3 @@
-<mat-icon class="action-favorite" [ngClass]="{'disabled': !firebase.isSignedIn}" (click)="setAsFavorite($event)">
+<mat-icon class="action-favorite" [ngClass]="{'disabled': !firebase.isSignedIn}" (click)="toggleFavorite($event)">
     {{ question.favorite ? 'favorite': 'favorite_border'
     }}</mat-icon>
