@@ -18,6 +18,7 @@ import { QuestionsComponent } from './components/questions/questions.component';
 import { FIREBASE_CONFIG } from "./environment";
 import { CategoryResolver } from './resolvers/category.resolver';
 import { ChildCategoriesResolver } from './resolvers/child-categories.resolver';
+import { FavoriteQuestionsResolver } from "./resolvers/favorite-questions.resolver";
 import { QuestionsResolver } from './resolvers/questions.resolver';
 import { AssetsCategoryService } from "./services/category/assets-category.service";
 import { CategoryServiceFactory } from "./services/category/category-service.factory";
@@ -64,6 +65,7 @@ import { RenderQuestionService } from "./services/question/render-question.servi
     AssetsQuestionService,
     CategoryResolver,
     QuestionsResolver,
+    FavoriteQuestionsResolver,
     ChildCategoriesResolver,
     MatDialog],
   bootstrap: [AppComponent]

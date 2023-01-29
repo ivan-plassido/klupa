@@ -1,5 +1,5 @@
 export default interface Question {
-    id: string,
+    _id: string,
     categoryId: string,
     question: string,
     answer: string,

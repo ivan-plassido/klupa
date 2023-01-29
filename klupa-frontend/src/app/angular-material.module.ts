@@ -5,6 +5,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatTableModule } from '@angular/material/table';
+import { MatTabsModule } from '@angular/material/tabs';
 
 @NgModule({
     imports: [
@@ -13,7 +14,8 @@ import { MatTableModule } from '@angular/material/table';
         MatPaginatorModule,
         MatIconModule,
         OverlayModule,
-        MatDialogModule
+        MatDialogModule,
+        MatTabsModule
     ],
     exports: [
         MatTableModule,
@@ -21,7 +23,8 @@ import { MatTableModule } from '@angular/material/table';
         MatPaginatorModule,
         MatIconModule,
         OverlayModule,
-        MatDialogModule
+        MatDialogModule,
+        MatTabsModule
     ]
 })
 export class AngularMaterialModule { }

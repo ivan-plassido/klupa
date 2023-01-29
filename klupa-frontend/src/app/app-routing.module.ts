@@ -4,6 +4,7 @@ import { CategoriesComponent } from './components/categories/categories.componen
 import { QuestionsComponent } from './components/questions/questions.component';
 import { CategoryResolver } from './resolvers/category.resolver';
 import { ChildCategoriesResolver } from './resolvers/child-categories.resolver';
+import { FavoriteQuestionsResolver } from './resolvers/favorite-questions.resolver';
 import { QuestionsResolver } from './resolvers/questions.resolver';
 
 const routes: Routes = [
@@ -18,7 +19,7 @@ const routes: Routes = [
   },
   {
     path: 'categories/:categoryId/questions', component: QuestionsComponent,
-    resolve: { category: CategoryResolver, questions: QuestionsResolver }
+    resolve: { category: CategoryResolver, questions: QuestionsResolver, favoriteQuestions: FavoriteQuestionsResolver }
   }
 ];
 
