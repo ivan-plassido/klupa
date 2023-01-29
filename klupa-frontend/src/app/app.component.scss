@@ -44,12 +44,12 @@ mat-spinner {
 }
 
 .source {
-    display: inline;
-    position: absolute;
-    float: right;
-    top: 0;
+    background-color: #1976d2;
+    position: fixed;
+    bottom: 20px;
     right: 20px;
-    color: white;
+    color: black;
+    padding: 5px;
 
     mat-icon {
         display: inline;
@@ -58,8 +58,28 @@ mat-spinner {
         padding-top: 5px;
 
         &:hover {
-            color: white;
+            color: orange;
             cursor: pointer;
+        }
+    }
+}
+
+.auth {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+
+    h5 {
+        margin-bottom: 0;
+
+        &.sign-out {
+            display: inline;
+            float: right;
+        }
+
+        &:hover {
+            cursor: pointer;
+            color: white;
         }
     }
 }

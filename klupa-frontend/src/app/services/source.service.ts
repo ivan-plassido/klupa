@@ -7,7 +7,7 @@ import { Source } from '../enums/Source';
 })
 export class SourceService {
 
-  private apiSource: Source = Source.Render;
+  private apiSource: Source = localStorage.getItem('dataSource') ? localStorage.getItem('dataSource') as Source : Source.Render;
   private apiSourceChange: Subject<Source> = new Subject<Source>();
 
   constructor() {
@@ -19,6 +19,7 @@ export class SourceService {
   }
 
   setApiSource(source: Source) {
+    localStorage.setItem('dataSource', source);
     this.apiSourceChange.next(source);
   }
 }

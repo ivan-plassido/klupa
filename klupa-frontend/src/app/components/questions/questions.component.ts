@@ -2,9 +2,10 @@ import { animate, state, style, transition, trigger } from '@angular/animations'
 import { AfterViewInit, Component, ViewChild } from '@angular/core';
 import { MatPaginator, PageEvent } from '@angular/material/paginator';
 import { MatTableDataSource } from '@angular/material/table';
-import { ActivatedRoute, Router } from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
 import Category from 'src/app/models/category.model';
 import Question from 'src/app/models/question.model';
+import { FirebaseService } from 'src/app/services/firebase.service';
 
 @Component({
   selector: 'klp-questions',
@@ -23,14 +24,20 @@ export class QuestionsComponent implements AfterViewInit {
   @ViewChild('paginator', { static: false }) paginator: MatPaginator;
 
   questions: MatTableDataSource<Question[]> | any;
-  questionColumns: string[] = ['question', 'actions'];
+  isSignedIn = false;
+  questionColumns: string[] = ['question'];
   expandedRow: Question | null;
   selectedCategory: Category;
   pageSize = localStorage.getItem('questions-page-size') ? Number(localStorage.getItem('questions-page-size')) : 10;
 
 
   constructor(
-    private route: ActivatedRoute, private router: Router) {
+    private route: ActivatedRoute,
+    private firebase: FirebaseService) {
+    if (this.firebase.isSignedIn) {
+      this.isSignedIn = true;
+      this.questionColumns = ['question', 'actions'];
+    }
   }
 
   ngOnInit() {
