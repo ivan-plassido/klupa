@@ -43,6 +43,7 @@ jobs:
           cd klupa-frontend
           npm ci
           npm run build-github
+          cp ./404.html ./dist/klupa-frontend/
 
       - name: Upload app artifact
         uses: actions/upload-artifact@v3
